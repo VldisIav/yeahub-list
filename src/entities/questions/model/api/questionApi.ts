@@ -1,35 +1,20 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import baseApi from "../../../../shared/api/baseApi";
+import type {
+  Question,
+  GetQuestionsListParams,
+  QuestionsListApiResponse,
+} from "../types/question";
 
-type getQuestionListDTO = {
-  page: number;
-  specialization?: string;
-  skills?: string;
-  rate?: string;
-  complexity?: string;
-  title?: string;
-};
+type TransformedQuestionsListResponse = Question[];
 
-type getQuestionListResponseTypeData = {
-  title: string;
-  shortAnswer: string;
-};
-
-type getQuestionListResponseType = {
-  data: getQuestionListResponseTypeData[];
-  page: number;
-  limit: number;
-  total: number;
-};
-
-export const questionsApi = createApi({
-  reducerPath: "questionsApi",
-  baseQuery: fetchBaseQuery({
-    baseUrl: "https://api.yeatwork.ru",
-  }),
+// type GetQuestionByIdDTO = {
+//   id: string;
+// };
+export const questionsApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getQuestionsList: build.query<
-      getQuestionListResponseType,
-      getQuestionListDTO
+      TransformedQuestionsListResponse, // Что возвращает хук (после transformResponse)
+      GetQuestionsListParams // Какие параметры принимает хук
     >({
       query: (params) => ({
         url: `/questions/public-questions`,
@@ -41,25 +26,24 @@ export const questionsApi = createApi({
           complexity: params.complexity || undefined,
           title: params.title || undefined,
         },
-        transformResponse: (response: getQuestionListResponseType) => {
-          if (!response || !Array.isArray(response.data)) {
-            console.error(
-              "Ошибка: response.data не массив или отсутствует!",
-              response
-            );
-            return [];
-          }
-          return response.data;
-        },
       }),
+      transformResponse: (response: QuestionsListApiResponse) => {
+        if (!response || !Array.isArray(response.data)) {
+          console.error(
+            "Ошибка: response.data не массив или отсутствует!",
+            response
+          );
+          return [];
+        }
+        return response.data;
+      },
     }),
-    getQuestionById: build.query({
+    getQuestionById: build.query<Question, string>({
       query: (params) => ({
         url: `/questions/public-questions/${params}`,
       }),
     }),
   }),
-  tagTypes: ["Questions", "Question", "Skills", "Specializations"],
 });
 
 export const { useGetQuestionsListQuery, useGetQuestionByIdQuery } =
