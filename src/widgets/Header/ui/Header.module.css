@@ -1,0 +1,90 @@
+.header {
+  width: 100%;
+  height: 64px; /* Fixed height for the header */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the container horizontally */
+  padding: 0 20px; /* Add some padding on the sides */
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px; /* Max width to match your original design intent */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes left and right blocks apart */
+  height: 100%; /* Ensure container takes full height of header */
+}
+
+.leftBlock,
+.rightBlock {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.leftBlock {
+  gap: 20px; /* Space between logo and nav */
+}
+.logo {
+  display: flex; /* Ensures image is centered if needed */
+  align-items: center;
+  text-decoration: none; /* Remove underline from logo link */
+  height: 100%; /* Ensure logo area takes full height for alignment */
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.navLink,
+.loginLink {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none; /* Remove underline from all links */
+  position: relative; /* For the underline animation */
+  padding: 5px 0; /* Add vertical padding for clickable area */
+}
+
+.loginLink:hover {
+  color: rgb(154, 30, 207);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.rightBlock {
+  gap: 26px; /* Space between login link and signup button */
+}
+
+.signupButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  color: #ffffff; /* White text for the button */
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #6a0bff;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.signupButton:hover {
+  background-color: white;
+  color: #6a0bff;
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.signupButton:active {
+  transform: scale(0.98); /* Slight press effect on click */
+}

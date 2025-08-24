@@ -1,0 +1,43 @@
+.accordion {
+  height: 40px;
+  max-width: 764px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #d1d1d1;
+}
+.icon {
+  align-items: center;
+  display: inline-flex;
+}
+.iconOpenStatus {
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
+}
+
+.iconisClosedStatus {
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+}
+
+.point {
+  background-color: #5533ff;
+  height: 8px;
+  width: 8px;
+}
+
+.textWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.shortQuestionWrapper {
+  margin-left: 24;
+  margin-bottom: 24px;
+}
+.hrLine {
+  margin-bottom: 24px;
+  border-top-width: 0;
+  border-bottom: 1px solid #e8e8e8;
+}

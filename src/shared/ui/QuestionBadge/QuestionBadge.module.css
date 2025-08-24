@@ -1,0 +1,25 @@
+.badgeWrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: fit-content;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+  color: white;
+  background-color: #6a0bff;
+  border-radius: 4px;
+}
