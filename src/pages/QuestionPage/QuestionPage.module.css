@@ -1,0 +1,29 @@
+.wrapper {
+  /* max-width: 804px; */
+  display: flex;
+  gap: 20px;
+}
+
+.wrapperInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillsBlock {
+  min-width: 360px;
+  min-height: 360px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #303030;
+}
+
+.authorName {
+  color: #6a0bff;
+}

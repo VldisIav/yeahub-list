@@ -1,22 +1,22 @@
 .header {
   width: 100%;
-  height: 64px; /* Fixed height for the header */
+  height: 64px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the container horizontally */
-  padding: 0 20px; /* Add some padding on the sides */
+  justify-content: center;
+  padding: 0 20px;
   margin-bottom: 40px;
 }
 
 .container {
   width: 100%;
-  max-width: 1440px; /* Max width to match your original design intent */
+  max-width: 1440px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Pushes left and right blocks apart */
-  height: 100%; /* Ensure container takes full height of header */
+  justify-content: space-between;
+  height: 100%;
 }
 
 .leftBlock,
@@ -27,13 +27,13 @@
 }
 
 .leftBlock {
-  gap: 20px; /* Space between logo and nav */
+  gap: 20px;
 }
 .logo {
-  display: flex; /* Ensures image is centered if needed */
+  display: flex;
   align-items: center;
-  text-decoration: none; /* Remove underline from logo link */
-  height: 100%; /* Ensure logo area takes full height for alignment */
+  text-decoration: none;
+  height: 100%;
 }
 
 .logoImage {
@@ -50,9 +50,9 @@
 .loginLink {
   font-size: 16px;
   font-weight: 500;
-  text-decoration: none; /* Remove underline from all links */
-  position: relative; /* For the underline animation */
-  padding: 5px 0; /* Add vertical padding for clickable area */
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
 }
 
 .loginLink:hover {
@@ -64,27 +64,27 @@
 }
 
 .rightBlock {
-  gap: 26px; /* Space between login link and signup button */
+  gap: 26px;
 }
 
 .signupButton {
   padding: 10px 20px;
   border: none;
-  border-radius: 8px; /* Slightly rounded corners */
-  color: #ffffff; /* White text for the button */
+  border-radius: 8px;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 500;
   background-color: #6a0bff;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .signupButton:hover {
   background-color: white;
   color: #6a0bff;
-  transform: translateY(-1px); /* Slight lift effect */
+  transform: translateY(-1px);
 }
 
 .signupButton:active {
-  transform: scale(0.98); /* Slight press effect on click */
+  transform: scale(0.98);
 }

@@ -23,9 +23,8 @@ const QuestionsPage = () => {
       {dataIsLoading && <div>Loading...</div>}
       {!dataIsLoading && (
         <div className={styles.wrapper}>
-          {/* <p>main page!(QuestionsPage)</p> */}
           <div>
-            <QuestionList questions={questions.data} />
+            <QuestionList questions={questions} />
           </div>
           <div>тут будут клевые фильтры</div>
         </div>

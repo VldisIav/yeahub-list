@@ -1,0 +1,17 @@
+.wrapper {
+  letter-spacing: 0%;
+  font-weight: 500;
+  color: #303030;
+}
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #303030;
+}
+.answer {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 130%;
+}

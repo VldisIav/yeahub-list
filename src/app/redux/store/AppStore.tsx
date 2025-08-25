@@ -1,17 +1,17 @@
-// import { questionsApi } from "@entities/questions";
 // import { skillsApi } from "@entities/skills/model/api/skillsApi";
 // import { specializationsApi } from "@entities/specializations";
 import { configureStore } from "@reduxjs/toolkit";
-import { questionsApi } from "../../../entities/questions/model/api/questionApi";
+// import { questionsApi } from "../../../entities/questions/model/api/questionApi";
+import baseApi from "../../../shared/api/baseApi";
 
 export const store = configureStore({
   reducer: {
-    [questionsApi.reducerPath]: questionsApi.reducer,
+    [baseApi.reducerPath]: baseApi.reducer,
     // [specializationsApi.reducerPath]: specializationsApi.reducer,
     // [skillsApi.reducerPath]: skillsApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(questionsApi.middleware),
+    getDefaultMiddleware().concat(baseApi.middleware),
   // .concat(specializationsApi.middleware)
   // .concat(skillsApi.middleware),
 });

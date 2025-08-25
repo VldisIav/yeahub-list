@@ -1,0 +1,94 @@
+.footer {
+  background-color: #18003e;
+  color: #d1d5db;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-left: 24px;  */
+  /* padding-right: 24px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff; 
+  display: flex;
+  gap: 12px; 
+  align-items: center; 
+  margin-bottom: 16px;
+}
+
+.info {
+  margin-bottom: 20px;
+  max-width: 289px;
+}
+
+.socialLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.socialLinks li img {
+  height: 24px; 
+  width: 24px;
+}
+
+.description {
+  color: #8c8c8c;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0%;
+  margin-bottom: 54px;
+}
+
+.copyBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #8c8c8c;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0%;
+  width: 100%;
+}
+
+.detailLinks {
+  display: flex;
+}
+
+.documentsAndLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.documentsText {
+  margin: 0;
+}
+.detailLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+.detailLinks li img {
+  height: 24px;
+  width: 24px;
+}
